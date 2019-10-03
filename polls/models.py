@@ -1,15 +1,17 @@
-import datetime
+from datetime import datetime
 from django.db import models
 from django.utils import timezone
 
 
 # Create your models here.
-class Search(models.Model):
-    search = models.CharField(max_length=500)
-    created = models.DateTimeField(auto_now=True)
+
+class Post(models.Model):
+    tittle = models.CharField(max_length=300)
+    body = models.TextField()
+    created_at = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
-        return '{}'.format(self.search)
+        return '{}'.format(self.tittle)
 
     class Meta:
-        verbose_name_plural = 'Searches'
+        verbose_name_plural = 'Posts'

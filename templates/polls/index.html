@@ -1,0 +1,15 @@
+{% extends 'polls/layout.html'%}
+
+{% block content %}
+<section class="container">
+  <h3 class="container">{{title}}</h3>
+  <h3>My name is {{name}}</h3>
+  <ul class="collection">
+    {% for posts in posts %}
+
+    <li class="collection-item"><a href="post/details/{{post.id}}">{{posts.title}}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% endblock%}

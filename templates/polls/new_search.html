@@ -1,0 +1,58 @@
+{% extends 'polls/layout.html' %}
+{% block content %}
+
+<section>
+  <div class="container">
+    <div class="row">
+      <h4>HELLO</h4>
+      <form action="{% url 'polls:search' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="search" placeholder="search">
+        <button type="submit" class="btn wave-effect">Send<i class="material-icons right">send</i></button>
+      </form>
+      <h4 class="text-aling center"> {{ searchData | title }}</h4>
+    </div>
+    <div class="row">
+      <div class="col s4 m4 l4">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://cdn1-www.dogtime.com/assets/uploads/2011/03/puppy-development.jpg" alt="">
+          </div>
+          <div class="card-content">
+            <p>Testing </p>
+          </div>
+          <div class="card-action">
+
+          </div>
+        </div>
+      </div>
+      <div class="col s4 m4 l4">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://cdn1-www.dogtime.com/assets/uploads/2011/03/puppy-development.jpg" alt="">
+          </div>
+          <div class="card-content">
+            <p>Testing </p>
+          </div>
+          <div class="card-action">
+
+          </div>
+        </div>
+      </div>
+      <div class="col s4 m4 l4">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://cdn1-www.dogtime.com/assets/uploads/2011/03/puppy-development.jpg" alt="">
+          </div>
+          <div class="card-content">
+            <p>Testing </p>
+          </div>
+          <div class="card-action">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

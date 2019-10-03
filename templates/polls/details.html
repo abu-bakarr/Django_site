@@ -1,0 +1,17 @@
+{% extends 'polls/layout.html'%}
+
+{% block content %}
+<section class="container">
+  <h4>{{post.title}}</h4>
+
+  <div class="card">
+    <div class="card-content">
+      {{post.body}}
+    </div>
+    <div class="card-action">
+      {{post.created_at}}
+    </div>
+  </div>
+</section>
+
+{% endblock%}
